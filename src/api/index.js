@@ -3,12 +3,13 @@
 */
 
 import ajax from './ajax'
+const BASE_URL = 'http://localhost:9999/takeaway'
 // 1、根据经纬度获取位置详情 gehash:经纬度字符串
-export const reqAdress = (gehash) => ajax(`/position/${gehash}`)
+export const reqAddress = (geohash) => ajax(`${BASE_URL}/map/position/${geohash}`)
 // 2、获取食品分类列表
-export const reqFoodTypes = () => ajax('/indexCatagory')
+export const reqFoodCategorys = () => ajax(BASE_URL + '/indexCategory')
 // 3、根据经纬度获取商铺列表 注意：{longitude, latitude} 是对象 key-val一样简写
-export const reqShops = (longitude, latitude) => ajax(`/shops`, {
+export const reqShops = (longitude, latitude) => ajax(`${BASE_URL}/shop/list`, {
   longitude,
   latitude
 })

@@ -3,7 +3,7 @@
     <HeaderTop title="我的" />
     <section class="profile-number">
       <!--router-link  -->
-      <!-- <router-link to="/login" class="profile-link">
+      <router-link to="/login" class="profile-link">
         <div class="profile_image">
           <i class="iconfont icon-person"></i>
         </div>
@@ -19,8 +19,8 @@
         <span class="arrow">
           <i class="iconfont icon-jiantou1"></i>
         </span>
-      </router-link> -->
-      <a href="javascript:;" class="profile-link" @click="goTo('/login')">
+      </router-link>
+      <!-- <a href="javascript:;" class="profile-link" @click="goTo('/login')">
         <div class="profile_image">
           <i class="iconfont icon-person"></i>
         </div>
@@ -36,7 +36,7 @@
         <span class="arrow">
           <i class="iconfont icon-jiantou1"></i>
         </span>
-      </a>
+      </a> -->
     </section>
     <section class="profile_info_data border-1px">
       <ul class="info_data_list">
@@ -118,18 +118,19 @@
 <script>
     import HeaderTop from "../../components/HeaderTop/HeaderTop.vue"
     export default {
-        methods: {
-          goTo (path) {
-            this.$router.replace(path)
-          }
-        },
+        // methods: {
+        //   goTo (path) {
+        //     this.$router.replace(path)
+        //   }
+        // },
         components: {
             HeaderTop
         }
     }
 </script>
 
-<style lang="stylus" rel="stylesheet/stylus">
+<style lang="stylus" rel="stylesheet/stylus" scoped>
+
     @import "../../common/stylus/mixins.styl"
     .profile //我的
           width 100%

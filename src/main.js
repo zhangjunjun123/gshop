@@ -11,7 +11,9 @@
 // 完整写法：import Vue from '../node_modules/vue/dist/vue.js'
 import Vue from 'vue'
 import App from './App'
+// 默认加载'./router/index.js'
 import router from './router'
+import store from './store'
 
 /* eslint-disable no-new */
 new Vue({
@@ -21,5 +23,6 @@ new Vue({
   // 1.0的写法
   // template: '<App/>',
   // components: {App}
-  router
+  router, // 使用上vue-router
+  store // 使用上vuex
 })
